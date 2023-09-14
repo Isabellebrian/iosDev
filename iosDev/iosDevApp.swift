@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct iosDevApp: App {
-    var body: some Scene {
+    let persistenceController = PersistenceController.shared
+    let userManager = UserManager(context: PersistenceController.shared.container.viewContext) // Create the UserManager instance here
+
+        var body: some Scene {   
         WindowGroup {
-            ContentView()
+            Main()
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            .environmentObject(userManager)
         }
     }
 }
