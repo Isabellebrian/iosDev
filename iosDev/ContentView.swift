@@ -15,8 +15,10 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
-            // Further use the viewModel to show and modify tasks
-            // ...
+            NavigationLink(destination: RegisterView()) {
+                Text("Don't have an account? Register")
+                
+            }
         }
         .padding()
     }

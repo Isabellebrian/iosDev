@@ -1,19 +1,6 @@
-//
-//  UserManager.swift
-//  iosDev
-//
-//  Created by Isabelle Brian on 14/9/2023.
-//
-
-//  UserManager.swift
-//  iosDev
-//
-//  Created by Isabelle Brian on 14/9/2023.
-//
-
 import Foundation
-import SwiftUI
 import CoreData
+import SwiftUI
 
 class UserManager: ObservableObject {
     @Published var currentUser: User?
@@ -24,32 +11,32 @@ class UserManager: ObservableObject {
         self.context = context
     }
     
-    func login(username: String, email: String) {
+    func login(username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@ AND email == %@", username, email)
-
+        fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
         do {
-            let results = try context.fetch(fetchRequest)
-            if let foundUser = results.first {
-                self.currentUser = foundUser
+            let users = try context.fetch(fetchRequest)
+            if users.count > 0 {
+                currentUser = users.first
+                completion(true, nil)
             } else {
-                print("No user found with provided credentials.")
+                completion(false, "Invalid username or password.")
             }
         } catch {
-            print("Error fetching user: \(error)")
+            completion(false, "An error occurred while fetching data.")
         }
     }
     
-    func register(username: String, email: String) {
-        let newUser = User(context: context)
-        newUser.username = username
-        newUser.email = email
-
+    func register(username: String, email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+        let user = User(context: context)
+        user.username = username
+        user.email = email
+        user.password = password
         do {
             try context.save()
-            self.currentUser = newUser
+            completion(true, nil)
         } catch {
-            print("Error saving new user: \(error)")
+            completion(false, "An error occurred while saving data.")
         }
     }
 }

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct iosDevApp: App {
     let persistenceController = PersistenceController.shared
     let userManager = UserManager(context: PersistenceController.shared.container.viewContext) // Create the UserManager instance here
+   
 
         var body: some Scene {   
         WindowGroup {

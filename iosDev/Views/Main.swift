@@ -1,52 +1,55 @@
-//
-//  Main.swift
-//  iosDev
-//
-//  Created by Isabelle Brian on 12/9/2023.
-//
+
 
 import SwiftUI
 
 struct Main: View {
     @EnvironmentObject var userManager: UserManager
-       @State private var username: String = ""
-       @State private var email: String = ""
-
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @State private var showErrorAlert = false
+    @State private var errorMessage = ""
+    @State private var showReminderView: Bool = false
 
     var body: some View {
-        VStack {
-            Text("Family Scheduler") // This is your title text.
-                .font(.largeTitle) // Makes the text larger, similar to a title.
-                .padding() // Adds padding around the text.
-                .foregroundColor(.blue)
-            
-            Spacer() // This pushes everything above it to the top.
-            
-            TextField("Username", text: $username)
-                            .padding()
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(8)
-            TextField("Email", text: $email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-            
-            Button("Login") {
-                    userManager.login(username: username, email: email)
+        NavigationView {
+            VStack {
+                Text("Family Scheduler")
+                    .font(.largeTitle)
+                    .padding()
+                    .foregroundColor(.blue)
+
+                TextField("Username", text: $username)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .autocapitalization(.none)
+                    .keyboardType(.emailAddress)
+
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+
+                Button("Login") {
+                    userManager.login(username: username, password: password) { success, error in
+                        if success {
+                            self.showReminderView = true
+                        } else if let error = error {
+                            self.errorMessage = error
+                            self.showErrorAlert = true
+                        }
+                    }
                 }
                 .padding()
-            
-            // Registration form (similar to above but calls register instead)
-            Button("Register") {
-                userManager.register(username: username, email: email)
+
+                NavigationLink("Register", destination: RegisterView())
             }
             .padding()
+            .alert(isPresented: $showErrorAlert) {
+                Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            }
+            .background(NavigationLink("", destination: ReminderView(), isActive: $showReminderView).opacity(0))
         }
-        .padding()    }
-}
-
-struct Main_Previews: PreviewProvider {
-    static var previews: some View {
-        Main()
     }
 }
+
