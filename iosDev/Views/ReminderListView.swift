@@ -1,21 +1,7 @@
-//
-//  ReminderView.swift
-//  iosDev
-//
-//  Created by Isabelle Brian on 14/9/2023.
-//
-
-
-
-//
-//  ReminderListView.swift
-//  iosDev
-//
-
 import SwiftUI
 
 struct ReminderListView: View {
-    @State private var reminders: [ReminderItem] = []
+    @State private var reminders: [ReminderItem] = [ReminderItem(id: UUID(), title: "Sample Reminder", date: Date())]  // Added a sample reminder
     @State private var showAddReminder = false
 
     var body: some View {
@@ -23,24 +9,15 @@ struct ReminderListView: View {
             VStack {
                 List {
                     ForEach(reminders) { reminder in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(reminder.title)
-                                    .font(.headline)
-                                Text(reminder.date, style: .date)
-                                    .font(.subheadline)
+                        ReminderRow(reminder: reminder, onDelete: { reminderItem in
+                            if let index = reminders.firstIndex(where: { $0.id == reminderItem.id }) {
+                                reminders.remove(at: index)
                             }
-                            Spacer()
-                            Button(action: {
-                                // Delete action
-                                deleteReminder(at: reminder.id)
-                            }) {
-                                Image(systemName: "trash")
-                            }
-                            .buttonStyle(BorderlessButtonStyle())
-                        }
+                        })
                     }
                 }
+
+                Spacer()
 
                 Button(action: {
                     showAddReminder.toggle()
@@ -54,15 +31,32 @@ struct ReminderListView: View {
                 .padding()
             }
             .sheet(isPresented: $showAddReminder) {
-                // New Reminder View goes here.
+                AddReminderView()
             }
             .navigationTitle("Reminders")
         }
     }
+}
 
-    func deleteReminder(at id: UUID) {
-        if let index = reminders.firstIndex(where: { $0.id == id }) {
-            reminders.remove(at: index)
+struct ReminderRow: View {
+    let reminder: ReminderItem
+    var onDelete: ((ReminderItem) -> Void)? = nil
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(reminder.title)
+                    .font(.headline)
+                Text(reminder.date, style: .date)
+                    .font(.subheadline)
+            }
+            Spacer()
+            Button(action: {
+                onDelete?(reminder)
+            }) {
+                Image(systemName: "trash")
+            }
+            .buttonStyle(BorderlessButtonStyle())
         }
     }
 }
@@ -72,3 +66,4 @@ struct ReminderItem: Identifiable {
     var title: String
     var date: Date
 }
+

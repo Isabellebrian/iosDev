@@ -17,6 +17,7 @@
 		AD711C512AB07974004C4FE5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C502AB07974004C4FE5 /* Task.swift */; };
 		AD711C532AB079C2004C4FE5 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C522AB079C2004C4FE5 /* TaskViewModel.swift */; };
 		AD711C552AB07AB4004C4FE5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C542AB07AB4004C4FE5 /* Main.swift */; };
+		ADD4F2292AB553D2006F2ECB /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */; };
 		ADE7E2942AB2C4C500759C24 /* FamilyScheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2922AB2C4C500759C24 /* FamilyScheduler.xcdatamodeld */; };
 		ADE7E2962AB2C6E200759C24 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */; };
 		ADE7E2982AB2C97400759C24 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2972AB2C97400759C24 /* UserManager.swift */; };
@@ -58,6 +59,7 @@
 		AD711C502AB07974004C4FE5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AD711C522AB079C2004C4FE5 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		AD711C542AB07AB4004C4FE5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 		ADE7E2932AB2C4C500759C24 /* FamilyScheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyScheduler.xcdatamodel; sourceTree = "<group>"; };
 		ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		ADE7E2972AB2C97400759C24 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */,
 				ADE7E2A12AB2E56400759C24 /* ListView.swift */,
 				ADE7E2A32AB2E5EF00759C24 /* CalView.swift */,
+				ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				AD711C512AB07974004C4FE5 /* Task.swift in Sources */,
 				ADE7E29C2AB2D9B600759C24 /* ReminderListView.swift in Sources */,
 				AD711C232AB0781F004C4FE5 /* iosDevApp.swift in Sources */,
+				ADD4F2292AB553D2006F2ECB /* AddReminderView.swift in Sources */,
 				ADE7E2A22AB2E56400759C24 /* ListView.swift in Sources */,
 				ADE7E2A42AB2E5EF00759C24 /* CalView.swift in Sources */,
 				ADE7E2982AB2C97400759C24 /* UserManager.swift in Sources */,
