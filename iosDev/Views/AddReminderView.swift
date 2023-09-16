@@ -8,23 +8,22 @@ import SwiftUI
 
 struct AddReminderView: View {
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var UserManager: UserManager  // Assuming you have some data manager to handle Core Data operations
+    @EnvironmentObject var userManager: UserManager
+
 
     @State private var title: String = ""
     @State private var time: Date = Date()
-    @State private var setBy: String = ""
-    @State private var description: String = ""
+    @State private var desc: String = ""
     @State private var date: Date = Date()
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Reminder Details")) {
+                Section(header: Text("Details")) {
                     TextField("Title", text: $title)
                     DatePicker("Date", selection: $date, displayedComponents: .date)
                     DatePicker("Time", selection: $time, displayedComponents: .hourAndMinute)
-                    TextField("Set By", text: $setBy)
-                    TextField("Description", text: $description)
+                    TextField("Description", text: $desc)
                 }
                 
                 Button(action: saveReminder) {
@@ -45,11 +44,14 @@ struct AddReminderView: View {
         }
     }
     
+    
     func saveReminder() {
-        // Here you'd have your logic to save the reminder to Core Data.
-        // Utilize your dataManager or equivalent to handle this.
-        
-        // For now, I'll just dismiss the view after the save attempt:
+        print("addReminder in UserManager called with title: \(title)")
+        userManager.addReminder(title: title, time: time, description: desc, date: date, setBy: userManager.currentUser?.username ?? "Unknown")
         self.presentationMode.wrappedValue.dismiss()
     }
+    
+
+    
+    
 }

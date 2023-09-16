@@ -39,4 +39,36 @@ class UserManager: ObservableObject {
             completion(false, "An error occurred while saving data.")
         }
     }
+    
+    func addReminder(title: String, time: Date, description: String, date: Date, setBy: String) {
+        // Create a new Reminder instance
+        let newReminder = Reminder(context: context)
+        newReminder.title = title
+        newReminder.time = time
+        newReminder.desc = description  //
+        newReminder.date = date
+        newReminder.setBy = setBy
+        newReminder.id = UUID() //
+
+
+        // Save the reminder
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving reminder: \(error)")
+        }
+    }
+    
+    func fetchReminders() -> [Reminder] {
+        let fetchRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
+        do {
+            let fetchedReminders = try context.fetch(fetchRequest)
+            return fetchedReminders
+        } catch {
+            print("Failed to fetch reminders: \(error)")
+            return []
+        }
+    }
+
+
 }
