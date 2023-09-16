@@ -21,7 +21,7 @@
 		ADE7E2962AB2C6E200759C24 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */; };
 		ADE7E2982AB2C97400759C24 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2972AB2C97400759C24 /* UserManager.swift */; };
 		ADE7E29A2AB2CF0C00759C24 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */; };
-		ADE7E29C2AB2D9B600759C24 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E29B2AB2D9B600759C24 /* ReminderView.swift */; };
+		ADE7E29C2AB2D9B600759C24 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */; };
 		ADE7E29E2AB2E04B00759C24 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */; };
 		ADE7E2A22AB2E56400759C24 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2A12AB2E56400759C24 /* ListView.swift */; };
 		ADE7E2A42AB2E5EF00759C24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2A32AB2E5EF00759C24 /* CalView.swift */; };
@@ -62,7 +62,7 @@
 		ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		ADE7E2972AB2C97400759C24 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		ADE7E29B2AB2D9B600759C24 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
 		ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ADE7E2A12AB2E56400759C24 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		ADE7E2A32AB2E5EF00759C24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 			children = (
 				AD711C542AB07AB4004C4FE5 /* Main.swift */,
 				ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */,
-				ADE7E29B2AB2D9B600759C24 /* ReminderView.swift */,
+				ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */,
 				ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */,
 				ADE7E2A12AB2E56400759C24 /* ListView.swift */,
 				ADE7E2A32AB2E5EF00759C24 /* CalView.swift */,
@@ -325,7 +325,7 @@
 				AD711C252AB0781F004C4FE5 /* ContentView.swift in Sources */,
 				AD711C532AB079C2004C4FE5 /* TaskViewModel.swift in Sources */,
 				AD711C512AB07974004C4FE5 /* Task.swift in Sources */,
-				ADE7E29C2AB2D9B600759C24 /* ReminderView.swift in Sources */,
+				ADE7E29C2AB2D9B600759C24 /* ReminderListView.swift in Sources */,
 				AD711C232AB0781F004C4FE5 /* iosDevApp.swift in Sources */,
 				ADE7E2A22AB2E56400759C24 /* ListView.swift in Sources */,
 				ADE7E2A42AB2E5EF00759C24 /* CalView.swift in Sources */,
