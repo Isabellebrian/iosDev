@@ -4,6 +4,7 @@ import SwiftUI
 
 class UserManager: ObservableObject {
     @Published var currentUser: User?
+    @Published var isAuthenticated: Bool = false
     
     let context: NSManagedObjectContext
     
@@ -69,6 +70,27 @@ class UserManager: ObservableObject {
             return []
         }
     }
+    
+    func clearAllReminders() -> Bool {
+        do {
+            try context.deleteAllData(forEntityName: "Reminder")
+            return true
+        } catch {
+            print("Failed to delete all reminders: \(error)")
+            return false
+        }
+    }
+
+}
 
 
+
+extension NSManagedObjectContext {
+    func deleteAllData(forEntityName entityName: String) throws {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        try self.execute(batchDeleteRequest)
+        try self.save()
+    }
 }

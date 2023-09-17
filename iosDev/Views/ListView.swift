@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @State private var tasks: [Task] = []
+    @State private var showingAddTask = false
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(Task.Category.allCases, id: \.self) { category in
+                    CategoryView(category: category, tasks: tasks.filter { $0.Category == category })
+                }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("Tasks")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingAddTask.toggle()
+                }) {
+                    Image(systemName: "plus")
+                }
+            )
+            .sheet(isPresented: $showingAddTask) {
+                AddTaskView(tasks: $tasks)
+            }
+        }
     }
 }

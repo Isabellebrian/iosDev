@@ -15,17 +15,18 @@
 		AD711C3E2AB07820004C4FE5 /* iosDevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C3D2AB07820004C4FE5 /* iosDevUITests.swift */; };
 		AD711C402AB07820004C4FE5 /* iosDevUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C3F2AB07820004C4FE5 /* iosDevUITestsLaunchTests.swift */; };
 		AD711C512AB07974004C4FE5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C502AB07974004C4FE5 /* Task.swift */; };
-		AD711C532AB079C2004C4FE5 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C522AB079C2004C4FE5 /* TaskViewModel.swift */; };
 		AD711C552AB07AB4004C4FE5 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD711C542AB07AB4004C4FE5 /* Main.swift */; };
+		ADD104802AB59DB0000FFC53 /* ReminderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1047F2AB59DB0000FFC53 /* ReminderListViewModel.swift */; };
+		ADD104822AB5A054000FFC53 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD104812AB5A054000FFC53 /* TaskViewModel.swift */; };
+		ADD104882AB6D9ED000FFC53 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD104872AB6D9ED000FFC53 /* CategoryView.swift */; };
+		ADD1048A2AB6DA21000FFC53 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD104892AB6DA21000FFC53 /* AddTaskView.swift */; };
 		ADD4F2292AB553D2006F2ECB /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */; };
 		ADE7E2942AB2C4C500759C24 /* FamilyScheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2922AB2C4C500759C24 /* FamilyScheduler.xcdatamodeld */; };
 		ADE7E2962AB2C6E200759C24 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */; };
 		ADE7E2982AB2C97400759C24 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2972AB2C97400759C24 /* UserManager.swift */; };
 		ADE7E29A2AB2CF0C00759C24 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */; };
 		ADE7E29C2AB2D9B600759C24 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */; };
-		ADE7E29E2AB2E04B00759C24 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */; };
 		ADE7E2A22AB2E56400759C24 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2A12AB2E56400759C24 /* ListView.swift */; };
-		ADE7E2A42AB2E5EF00759C24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E2A32AB2E5EF00759C24 /* CalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,17 +58,18 @@
 		AD711C3D2AB07820004C4FE5 /* iosDevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosDevUITests.swift; sourceTree = "<group>"; };
 		AD711C3F2AB07820004C4FE5 /* iosDevUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosDevUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD711C502AB07974004C4FE5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		AD711C522AB079C2004C4FE5 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		AD711C542AB07AB4004C4FE5 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		ADD1047F2AB59DB0000FFC53 /* ReminderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewModel.swift; sourceTree = "<group>"; };
+		ADD104812AB5A054000FFC53 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		ADD104872AB6D9ED000FFC53 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		ADD104892AB6DA21000FFC53 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 		ADE7E2932AB2C4C500759C24 /* FamilyScheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyScheduler.xcdatamodel; sourceTree = "<group>"; };
 		ADE7E2952AB2C6E200759C24 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		ADE7E2972AB2C97400759C24 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
-		ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ADE7E2A12AB2E56400759C24 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		ADE7E2A32AB2E5EF00759C24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,10 +173,10 @@
 				AD711C542AB07AB4004C4FE5 /* Main.swift */,
 				ADE7E2992AB2CF0C00759C24 /* RegisterView.swift */,
 				ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */,
-				ADE7E29D2AB2E04B00759C24 /* ProfileView.swift */,
-				ADE7E2A12AB2E56400759C24 /* ListView.swift */,
-				ADE7E2A32AB2E5EF00759C24 /* CalView.swift */,
 				ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */,
+				ADE7E2A12AB2E56400759C24 /* ListView.swift */,
+				ADD104872AB6D9ED000FFC53 /* CategoryView.swift */,
+				ADD104892AB6DA21000FFC53 /* AddTaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,7 +184,8 @@
 		AD711C4F2AB07954004C4FE5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				AD711C522AB079C2004C4FE5 /* TaskViewModel.swift */,
+				ADD1047F2AB59DB0000FFC53 /* ReminderListViewModel.swift */,
+				ADD104812AB5A054000FFC53 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -325,17 +328,18 @@
 				ADE7E29A2AB2CF0C00759C24 /* RegisterView.swift in Sources */,
 				AD711C552AB07AB4004C4FE5 /* Main.swift in Sources */,
 				ADE7E2962AB2C6E200759C24 /* PersistenceController.swift in Sources */,
+				ADD1048A2AB6DA21000FFC53 /* AddTaskView.swift in Sources */,
 				AD711C252AB0781F004C4FE5 /* ContentView.swift in Sources */,
-				AD711C532AB079C2004C4FE5 /* TaskViewModel.swift in Sources */,
 				AD711C512AB07974004C4FE5 /* Task.swift in Sources */,
 				ADE7E29C2AB2D9B600759C24 /* ReminderListView.swift in Sources */,
 				AD711C232AB0781F004C4FE5 /* iosDevApp.swift in Sources */,
 				ADD4F2292AB553D2006F2ECB /* AddReminderView.swift in Sources */,
 				ADE7E2A22AB2E56400759C24 /* ListView.swift in Sources */,
-				ADE7E2A42AB2E5EF00759C24 /* CalView.swift in Sources */,
 				ADE7E2982AB2C97400759C24 /* UserManager.swift in Sources */,
-				ADE7E29E2AB2E04B00759C24 /* ProfileView.swift in Sources */,
+				ADD104802AB59DB0000FFC53 /* ReminderListViewModel.swift in Sources */,
+				ADD104822AB5A054000FFC53 /* TaskViewModel.swift in Sources */,
 				ADE7E2942AB2C4C500759C24 /* FamilyScheduler.xcdatamodeld in Sources */,
+				ADD104882AB6D9ED000FFC53 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +504,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,6 +537,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

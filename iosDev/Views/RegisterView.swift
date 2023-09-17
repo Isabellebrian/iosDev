@@ -61,7 +61,6 @@ struct RegisterView: View {
             showAlert = true
             return false
         }
-        // If you have other validation checks, add them here.
         return true
     }
 }

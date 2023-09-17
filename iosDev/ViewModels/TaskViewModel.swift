@@ -2,7 +2,7 @@
 //  TaskViewModel.swift
 //  iosDev
 //
-//  Created by Isabelle Brian on 12/9/2023.
+//  Created by Isabelle Brian on 16/9/2023.
 //
 
 import Foundation
@@ -10,6 +10,4 @@ import Foundation
 class TaskViewModel: ObservableObject {
     @Published var tasks: [Task] = []
     
-    // Functions to modify tasks
-    // ...
 }

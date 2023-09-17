@@ -36,12 +36,20 @@ struct AddReminderView: View {
                 }
             }
             .navigationBarTitle("Add Reminder", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Cancel")
-            })
-        }
+            .navigationBarItems(
+                leading: Button(action: {
+                           self.presentationMode.wrappedValue.dismiss()
+                       }) {
+                           Text("Back")
+                       },
+                       trailing:Button(action: {
+                           self.presentationMode.wrappedValue.dismiss()
+                       }) {
+                           Text("Cancel")
+                       }
+                   )
+               }
+        
     }
     
     

@@ -7,9 +7,18 @@
 
 import Foundation
 
-struct Task: Identifiable, Codable {
+struct Task: Identifiable, Encodable {
     var id = UUID()
     var title: String
     var isComplete: Bool = false
     var date: Date
+    var Category: Category
+    
+    
+    enum Category: String, CaseIterable, Encodable {
+            case personal = "Personal"
+            case food = "Food"
+            case admin = "Admin"
+            case purchases = "Purchases"
+        }
 }
