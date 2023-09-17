@@ -8,20 +8,20 @@
 import SwiftUI
 
 
-@main
+@main // Main , this is the iosDevApp
 struct iosDevApp: App {
-    let persistenceController = PersistenceController.shared
-    let userManager = UserManager(context: PersistenceController.shared.container.viewContext)
+    let persistenceController = PersistenceController.shared // establishing persistance Controller
+    let userManager = UserManager(context: PersistenceController.shared.container.viewContext) // User Manager, core data
     
    
     init() {
-        // Change the tab bar's background color
+        // Change the background color
         UITabBar.appearance().barTintColor = UIColor.red
 
-        // Change the active tab item color
+        // Change the item color
         UITabBar.appearance().tintColor = UIColor.white
 
-        // Change the unselected tab item color
+        // Change of  unselected tab item 
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
     }
     var body: some Scene {

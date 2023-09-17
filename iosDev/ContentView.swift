@@ -1,15 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var userManager: UserManager // Adding user manager
     
-    init() {
+    init() { // This is the init method i used to change color of the navigation bar
         UITabBar.appearance().barTintColor = UIColor.lightGray
         UITabBar.appearance().tintColor = UIColor.white
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
     }
     
-    var body: some View {
+    var body: some View { // view, this makes the Main view as the first displayed view
         if userManager.isAuthenticated {
             UserNavigationView()
         } else {

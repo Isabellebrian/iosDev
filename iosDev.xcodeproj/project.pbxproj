@@ -175,8 +175,8 @@
 				ADE7E29B2AB2D9B600759C24 /* ReminderListView.swift */,
 				ADD4F2282AB553D2006F2ECB /* AddReminderView.swift */,
 				ADE7E2A12AB2E56400759C24 /* ListView.swift */,
-				ADD104872AB6D9ED000FFC53 /* CategoryView.swift */,
 				ADD104892AB6DA21000FFC53 /* AddTaskView.swift */,
+				ADD104872AB6D9ED000FFC53 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
