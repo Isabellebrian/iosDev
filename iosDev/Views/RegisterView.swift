@@ -1,8 +1,10 @@
 import SwiftUI
-
+// This is the Register Page!
 struct RegisterView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var userManager: UserManager
+    @Environment(\.presentationMode) var presentationMode 
+    @EnvironmentObject var userManager: UserManager // refering to data model for the view
+    
+    //All state variables that will hold user data
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -11,7 +13,7 @@ struct RegisterView: View {
     @State private var alertMessage: String = ""
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 20) { // using vstack again here for register form
             TextField("Username", text: $username)
                 .padding()
                 .background(Color.gray.opacity(0.2))
@@ -27,14 +29,14 @@ struct RegisterView: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
             
-            Button("Register") {
+            Button("Register") { // Register button which will check if data entered was successful
                 if validateFields() {
                     userManager.register(username: username, email: email, password: password) { success, error in
                         if success {
-                            self.alertTitle = "Success"
-                            self.alertMessage = "You have successfully registered."
+                            self.alertTitle = "Success" // user feedback
+                            self.alertMessage = "You have successfully registered." // user feedback
                             self.showAlert = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // error handling, dismisses view if left on idel!
                                 self.presentationMode.wrappedValue.dismiss()
                             }
                         } else if let error = error {
@@ -46,18 +48,18 @@ struct RegisterView: View {
                 }
             }
 
-            .padding()
+            .padding() // UI trick i learned to add space between elements
         }
         .padding()
         .alert(isPresented: $showAlert) {
-            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK"))) // pop up message allowing user to click okay
         }
     }
 
     func validateFields() -> Bool {
         if username.isEmpty || email.isEmpty || password.isEmpty {
             alertTitle = "Error"
-            alertMessage = "Please fill in all fields."
+            alertMessage = "Please fill in all fields." // error handling to validate input
             showAlert = true
             return false
         }
