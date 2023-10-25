@@ -34,7 +34,7 @@ class UserManager: ObservableObject {
     // Register function , takes username, email, password as perimeter . Completed form is either true or false
     func register(username: String, email: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         let user = User(context: context)  // refering to context constant above assign to NSM object Context
-        // user data properties         user.username = username
+        user.username = username
         user.email = email
         user.password = password
         do {
